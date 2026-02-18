@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Наставничество / Насаатчылык — Дария Батырханова</title>
+  <meta name="description" content="Премиальный лендинг курса личностного роста Дарии Батырхановой. RU / KG." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="mode-online">
+  <div class="topProgress" id="topProgress" aria-hidden="true"></div>
+
+  <div class="bgAmbient" aria-hidden="true">
+    <div class="bgOrb bgOrb--1"></div>
+    <div class="bgOrb bgOrb--2"></div>
+    <div class="bgGrid"></div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="На главную">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span id="brandName">Дария Батырханова</span>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="#results" data-i18n="nav.results">Результаты</a>
+        <a href="#program" data-i18n="nav.program">Программа</a>
+        <a href="#pricing" data-i18n="nav.pricing">Тарифы</a>
+        <a href="#" class="nav__cta js-dynamic-cta" data-i18n="nav.cta">Записаться</a>
+      </nav>
+
+      <div class="headerActions">
+        <div class="lang">
+          <button class="lang__btn" id="langRu" type="button" aria-pressed="true">RU</button>
+          <button class="lang__btn" id="langKg" type="button" aria-pressed="false">KG</button>
+        </div>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+      <a href="#results" data-i18n="nav.results">Результаты</a>
+      <a href="#program" data-i18n="nav.program">Программа</a>
+      <a href="#pricing" data-i18n="nav.pricing">Тарифы</a>
+      <a href="#" class="btn btn--primary js-dynamic-cta" data-i18n="nav.cta">Записаться</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container modeContainer">
+      <div class="modeSwitcher">
+        <button class="modeBtn active" id="modeOnline" data-mode="online">
+          <span class="modeIcon">🌐</span> <span data-i18n="modes.online">Женщина в Балансе</span>
+        </button>
+        <button class="modeBtn" id="modeOffline" data-mode="offline">
+          <span class="modeIcon">💎</span> <span data-i18n="modes.offline">Наставничество</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mainContent" style="transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); opacity: 1; transform: translateY(0);">
+      
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="reveal">
+            <div class="badge" id="heroBadge"></div>
+
+            <h1 class="h1" id="heroTitle"></h1>
+            <p class="lead" id="heroSubtitle"></p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary js-dynamic-cta" id="heroCta" href="#" data-track="cta-hero-primary" data-i18n="nav.cta">Записаться</a>
+              <a class="btn btn--ghost" href="#program" data-track="cta-hero-secondary" data-i18n="hero.secondaryCta">Программа</a>
+            </div>
+
+            <div class="hero__meta" id="heroMeta"></div>
+
+            <div class="trustRow reveal">
+              <div class="trustItem" id="trust1"></div>
+              <div class="trustItem" id="trust2"></div>
+              <div class="trustItem" id="trust3"></div>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <div class="card heroCard">
+              <div class="heroSlider" id="heroSlider" aria-label="Фото курса">
+                <div class="heroSlider__track" id="heroSliderTrack"></div>
+                <div class="heroSlider__dots" id="heroSliderDots" aria-hidden="true"></div>
+              </div>
+
+              <div class="heroCard__inside">
+                <div class="heroCard__note" id="heroNote"></div>
+                <div class="heroMiniStats" id="heroMiniStats"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logos">
+        <div class="container reveal">
+          <div class="logos__title" data-i18n="logos.title">Вас часто останавливает не отсутствие силы, а отсутствие системы</div>
+          <div class="logos__row" id="logosRow"></div>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <h2 class="h2" id="resultsTitle"></h2>
+            <p class="muted" id="resultsSubtitle"></p>
+          </div>
+
+          <div class="grid3" id="resultsGrid"></div>
+
+          <div class="counters reveal" id="countersWrapper">
+            <div class="counter">
+              <div class="counter__value" id="counter1">0</div>
+              <div class="counter__label" id="counter1Label"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="program">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <h2 class="h2" id="programTitle"></h2>
+            <p class="muted" id="programSubtitle"></p>
+          </div>
+
+          <div class="grid2" id="programGrid"></div>
+
+          <div class="callout reveal" id="programCallout">
+            <div>
+              <div class="callout__title" id="calloutTitle"></div>
+              <div class="callout__text" id="calloutText"></div>
+            </div>
+            <a class="btn btn--primary js-dynamic-cta" href="#" data-track="cta-callout" data-i18n="program.calloutCta">Оставить заявку</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <h2 class="h2" id="testimonialsTitle"></h2>
+            <p class="muted" id="testimonialsSubtitle"></p>
+          </div>
+
+          <div class="slider reveal">
+            <button class="slider__btn" id="prevTest" aria-label="Назад">‹</button>
+            <div class="slider__track" id="testimonialsTrack"></div>
+            <button class="slider__btn" id="nextTest" aria-label="Вперед">›</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="pricing">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <h2 class="h2" id="pricingTitle"></h2>
+            <p class="muted" id="pricingSubtitle"></p>
+          </div>
+
+          <div class="grid3" id="pricingGrid"></div>
+          <p class="fineprint muted reveal" id="pricingFineprint"></p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer__inner">
+          <div class="muted" id="footerText"></div>
+          <a class="muted" href="#top" data-i18n="footer.top">Наверх ↑</a>
+        </div>
+      </footer>
+
+    </div> </main>
+
+  <a class="mobileStickyCta js-dynamic-cta" href="#" data-i18n="nav.cta" data-track="cta-sticky">Записаться</a>
+
+  <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="modal" id="imageModal" aria-hidden="true">
+    <span class="modal__close" id="modalClose">&times;</span>
+    <img class="modal__img" id="modalImg" src="" alt="Увеличенный отзыв">
+  </div>
+
+  <script src="./js/content.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
