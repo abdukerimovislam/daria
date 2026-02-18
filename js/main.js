@@ -4,7 +4,7 @@ const $ = (id) => document.getElementById(id);
 const qsa = (sel) => Array.from(document.querySelectorAll(sel));
 
 let state = {
-  lang: localStorage.getItem("lang") || "ru",
+  lang: localStorage.getItem("lang") || "kg",
   mode: "online" 
 };
 
@@ -327,4 +327,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setLang(state.lang);
+
 });
